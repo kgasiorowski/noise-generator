@@ -61,3 +61,17 @@ sf::Image NoiseGen::smooth(sf::Image noiseToSmooth) {
 	return toReturn;
 
 }
+
+sf::Image NoiseGen::sfSmooth(sf::Image noiseToSmooth) {
+
+	sf::Image toReturn;
+	sf::Texture temp;
+	int noiseWidth = noiseToSmooth.getSize().x, noiseHeight = noiseToSmooth.getSize().y;
+
+	temp.loadFromImage(noiseToSmooth);
+	temp.setSmooth(true);
+	toReturn = temp.copyToImage();
+
+	return toReturn;
+
+}

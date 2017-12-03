@@ -36,12 +36,12 @@ int main() {
 	noise.saveToFile(filename);
 
 	cout << "Smoothing noise..." << endl;
-	sf::Image smoothedNoise = noiseGen.smooth(noise);
+	sf::Image smoothedNoise = noiseGen.sfSmooth(noise);
 
 	string rawfilename = filename.substr(0, filename.find("."));
 	string extension = filename.substr(filename.find("."));
 
-	string smoothedNoiseFile = rawfilename + "-s" + extension;
+	string smoothedNoiseFile = rawfilename + "_smooth" + extension;
 
 	cout << "Writing smoothed noise to " << smoothedNoiseFile << endl;
 	smoothedNoise.saveToFile(smoothedNoiseFile);

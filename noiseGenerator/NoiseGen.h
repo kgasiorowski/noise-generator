@@ -6,5 +6,6 @@ class NoiseGen {
 public:
 	sf::Image noise(sf::Vector2u size);
 	sf::Image smooth(sf::Image noiseToSmooth);
+	sf::Image sfSmooth(sf::Image noiseToSmooth);
 
 };
